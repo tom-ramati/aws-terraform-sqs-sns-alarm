@@ -3,7 +3,7 @@ resource "aws_sqs_queue" "queue" {
 }
 
 resource "aws_sns_topic" "topic" {
-  name = var.name
+  name = "notify-to-teams"
 }
 
 resource "aws_cloudwatch_metric_alarm" "alarm" {
