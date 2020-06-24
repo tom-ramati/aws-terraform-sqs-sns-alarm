@@ -34,5 +34,5 @@ module "team-new-queue" {
 - Run `terraform init && terraform plan && terraform apply`
 
 ## Notes
-The SNS forwarding the notifications to an Email address is unsupported from Terraform because the endpoint needs to be authorized and does not generate an ARN until the target email address has been validated. This breaks the Terraform model and as a result is not currently supported.
+The SNS forwarding of the notifications to an Email address is unsupported from Terraform because the endpoint needs to be authorized and does not generate an ARN until the target email address has been validated. This breaks the Terraform model and as a result is not currently supported.
 Therefore, the addition of the email addresses of the teams should be manual.
