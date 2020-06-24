@@ -14,7 +14,7 @@ specified. So that we can be alerted whenever something goes wrong with the queu
 
 ### Solution
 - I used Terraform version (0.12.26) as the automation tool.
-- The repository is accessible by GitHub.
+- The repository is accessible by GitHub for the team members to access and edit.
 - The definition file is `config.tf`
 - I chose Email as the monitoring solution. I find it easy to modify, add or remove subscriptions.
 
@@ -33,6 +33,6 @@ module "team-new-queue" {
 ```
 - Run `terraform init && terraform plan && terraform apply`
 
-## Notes
+### Notes
 The SNS forwarding of the notifications to an Email address is unsupported from Terraform because the endpoint needs to be authorized and does not generate an ARN until the target email address has been validated. This breaks the Terraform model and as a result is not currently supported.
 Therefore, the addition of the email addresses of the teams should be manual.
